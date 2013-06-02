@@ -48,7 +48,6 @@ require_once($langfile);
     <meta name="description" content="Nicolas Brugneaux - Online Resume" />
     <meta name="keywords" content="css3, typography, styles, letters, creative, effects, transitions, animations, education, skills, nicolas, brugneaux, nicolas brugneaux, cv, resume, currilum vitae, erasmus, student, exchange student, french student, denmark, france" />
     <meta name="author" content="Nicolas Brugneaux" />
-	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="../css/<?php echo $stylesheet; ?>" />
 	<link rel="stylesheet" href="../css/printable.css" type="text/css" media="print" />
 	<link rel="stylesheet" href="../css/icons.css" type="text/css" />
@@ -61,13 +60,29 @@ require_once($langfile);
 			<a id="en" href="../en"></a>
 			<!--<?php //echo '<a href="javascript:window.print()" >' . $lang['print'] . '</a>'; ?>-->
 	</nav>
-<!--
-	<div id="twitter">
-		<a class="twitter-timeline" href="https://twitter.com/Nicolas_Bru_" data-widget-id="299448951831138304">Tweets by @Nicolas_Bru_</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-	</div>
--->
 	<div id="content">
+		<div id="twitter">
+			<a class="twitter-timeline" 
+				href="https://twitter.com/Nicolas_Bru_" 
+				data-widget-id="299448951831138304"
+				width="300" 
+				height="500">
+				Tweets by @Nicolas_Bru_
+			</a>
+				<style type="text/css">#twitter{position: absolute;right:5px;}</style>
+				<script>
+					!function(d,s,id){
+						var js,fjs=d.getElementsByTagName(s)[0];
+						if(!d.getElementById(id)){
+							js=d.createElement(s);
+							js.id=id;
+							js.src="//platform.twitter.com/widgets.js";
+							fjs.parentNode.insertBefore(js,fjs);
+						}
+					}
+					(document,"script","twitter-wjs");
+				</script>
+		</div>
 		<div id="header">
 			<span class="header_name"><a href=".." ><img title="<?php echo $lang['header'];?>" id="banner" src="../images/header.png" alt="<?php echo $lang['header'];?>"></a></span><br/>
 			<span id="resume_subtitle" class="subtitle">
