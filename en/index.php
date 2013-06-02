@@ -51,10 +51,11 @@ require_once($langfile);
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="../css/<?php echo $stylesheet; ?>" />
 	<link rel="stylesheet" href="../css/printable.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="../css/icons.css" type="text/css" />
 	<link rel="icon" type="image/png" href="../images/favicon.ico">
 </head>
 <body>
-	<?php include_once("analyticstracking.php") ?>
+	<?php include_once("../analyticstracking.php") ?>
 	<nav>
 			<a id="fr" href="../fr"></a>
 			<a id="en" href="../en"></a>
@@ -140,7 +141,7 @@ require_once($langfile);
 				<?php if (isset($settings['social_media']) && $settings['social_media'] == true) { ?>
 				<p><span class="title"><?php echo $lang['social_media']?></span><br/>
 				<?php for($i=0; $i<count($social_media); $i++) { ?>
-				<span class="media"><a id="<?php echo $social_media[$i][0]?>" target="_blank" title="<?php echo $social_media[$i][0] ?>" href="<?php echo($social_media[$i][1]); ?>"></a></span>
+				<span class="media"><a class="icon-<?php echo strtolower($social_media[$i][0])?>" target="_blank" title="<?php echo $social_media[$i][0] ?>" href="<?php echo($social_media[$i][1]); ?>"></a></span>
 				<?php } ?>
 				</p><br/>
 				<?php } ?>

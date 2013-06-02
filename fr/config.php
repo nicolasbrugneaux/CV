@@ -10,6 +10,7 @@ $personal['address'] = 'Slotsgade 11, room 23<br/>8700 Horsens<br/>DENMARK<br/><
 // Social links
 $social_media[] = array('Facebook', 'https://facebook.com/nicolas.brugneaux', '../images/facebook.png');
 $social_media[] = array('Twitter', 'https://twitter.com/Nicolas_Bru_', '../images/twitter.png');
+$social_media[] = array('GitHub', 'https://github.com/nicolasbrugneaux', '../images/github.png');
 
 // Work history
 $work_history[] = array('2011',
@@ -28,7 +29,7 @@ $education[] = array('FRANCE : Lycee Leclerc', '2010 - Baccalaureat S option Mat
 
 // Skills
 $skills[] = array('Langages', 'Français - Langue maternelle<br/>Anglais - Ecrit et parlé couramment');
-$skills[] = array('Langages de programmation', 'Assembleur - C - C# - Java<br/>HTML - Css - JavaScript - PHP (+Doctrine)<br/>Bash - Python - SQL');
+$skills[] = array('Langages de programmation', 'C# - Java<br/>HTML5 - CSS3 &amp; <i>Less</i> - JavaScript &amp; <i>JQuery</i><br/>PHP &amp; <i>CodeIgniter - CakePHP - Doctrine</i><br/>Python &amp; <i>Django</i><br/>Bash - SQL - Git<br/>Assembleur - C');
 $skills[] = array('Systèmes d\'exploitations', 'Mac OS - Windows - Linux');
 $skills[] = array('Logiciels', 'Eclipse, Atmel, Visual Studio,<br/> Maple, Suite Office, Photoshop, Sublime Text 2');
 
