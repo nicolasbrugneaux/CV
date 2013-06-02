@@ -41,17 +41,6 @@ require_once($langfile);
 ?>
 <!DOCTYPE html>
 <html>
-<!--
-
-                      _           _     _   _                                       
-  _   _  ___  _   _  | | ___  ___| |_  | |_| |__   ___    __ _  __ _ _ __ ___   ___ 
- | | | |/ _ \| | | | | |/ _ \/ __| __| | __| '_ \ / _ \  / _` |/ _` | '_ ` _ \ / _ \
- | |_| | (_) | |_| | | | (_) \__ \ |_  | |_| | | |  __/ | (_| | (_| | | | | | |  __/
-  \__, |\___/ \__,_| |_|\___/|___/\__|  \__|_| |_|\___|  \__, |\__,_|_| |_| |_|\___|
-  |___/                                                  |___/                      
-
-
--->
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -65,6 +54,7 @@ require_once($langfile);
 	<link rel="icon" type="image/png" href="../images/favicon.ico">
 </head>
 <body>
+	<?php include_once("analyticstracking.php") ?>
 	<nav>
 			<a id="fr" href="../fr"></a>
 			<a id="en" href="../en"></a>
@@ -190,5 +180,4 @@ require_once($langfile);
 		</div>
 	</div>
 </body>
-
 </html>
