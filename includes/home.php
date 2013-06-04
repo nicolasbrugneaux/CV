@@ -30,7 +30,7 @@
 	<div id="content">
 		<div id="flag">
 			<a id="fr" href="./index.php?fr"></a>
-			<a id="en" href="./index.php?fr"></a>
+			<a id="en" href="./index.php?en"></a>
 		</div>
 	</div>
 </body>
