@@ -8,8 +8,14 @@ $skills = array();
 $awards = array();
 $settings = array();
 $lang = array();
-
-require_once('config.php');
+if(isset($_GET['en']))
+{
+	require_once('./includes/en/config.php');
+}
+else if(isset($_GET['fr']))
+{
+	require_once('./includes/fr/config.php');
+}
 
 if (isset($settings['style']) && $settings['style'] == "dark")
 {
@@ -28,13 +34,13 @@ else
 	$stylesheet = 'dark.css';
 }
 
-if (isset($settings['lang']) && file_exists("lang" . $settings['lang']) . ".php")
+if (isset($settings['lang']) && file_exists($settings['lang']."/lang.php"))
 {
-	$langfile = "lang/" . $settings['lang'] . ".php";
+	$langfile = $settings['lang']."/lang.php";
 }
 else
 {
-	$langfile = "lang/en.php";
+	$langfile = "en/lang.php";
 }
 require_once($langfile);
 
@@ -45,19 +51,19 @@ require_once($langfile);
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title><?php echo $lang['title']; ?></title>
-    <meta name="description" content="Nicolas Brugneaux - CV En Ligne" />
+    <meta name="description" content="<?php echo  $lang['title']; ?>" />
     <meta name="keywords" content="css3, typography, styles, letters, creative, effects, transitions, animations, education, skills, nicolas, brugneaux, nicolas brugneaux, cv, resume, currilum vitae, erasmus, student, exchange student, french student, denmark, france" />
     <meta name="author" content="Nicolas Brugneaux" />
-	<link rel="stylesheet" type="text/css" href="../css/<?php echo $stylesheet;?>"/>
-	<link rel="stylesheet" href="../css/printable.css" type="text/css" media="print"/>
-	<link rel="stylesheet" href="../css/icons.css" type="text/css"/>
-	<link rel="icon" type="image/png" href="../images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./css/<?php echo $stylesheet; ?>" />
+	<link rel="stylesheet" href="./css/printable.css" type="text/css" media="print" />
+	<link rel="stylesheet" href="./css/icons.css" type="text/css" />
+	<link rel="icon" type="image/png" href="./images/favicon.ico">
 </head>
 <body>
-	<?php include_once("../analyticstracking.php") ?>
+	<?php include_once("./includes/analyticstracking.php") ?>
 	<nav>
-			<a id="fr" href="../fr"></a>
-			<a id="en" href="../en"></a>
+			<a id="fr" href="./index.php?fr"></a>
+			<a id="en" href="./index.php?en"></a>
 			<!--<?php //echo '<a href="javascript:window.print()" >' . $lang['print'] . '</a>'; ?>-->
 	</nav>
 	<div id="content">
@@ -84,7 +90,7 @@ require_once($langfile);
 				</script>
 		</div>
 		<div id="header">
-			<span class="header_name"><a href=".." ><img title="<?php echo $lang['header'];?>" id="banner" src="../images/header.png" alt="<?php echo $lang['header'];?>"></a></span><br/>
+			<span class="header_name"><a href="index.php" ><img title="<?php echo $lang['header'];?>" id="banner" src="./images/header.png" alt="<?php echo $lang['header'];?>"></a></span><br/>
 			<span id="resume_subtitle" class="subtitle">
 				<?php
 				if (isset($personal['phone_number']))
@@ -99,7 +105,7 @@ require_once($langfile);
 				{
 					echo '<a href="mailto:'.$personal['email_address'].'">'.$personal['email_address'].'</a>';
 				}
-				echo '<a href="CV.pdf"><img title="Téléchargez version PDF" id="pdf_logo" src="../images/pdf_logo.png"></a>';
+				echo '<a href="CV.pdf"><img title="'. $lang['pdf'].'" id="pdf_logo" src="./images/pdf_logo.png"></a>';
 				?>
 			</span>
 			<span id="print_subtitle">
@@ -116,7 +122,7 @@ require_once($langfile);
 				{
 					echo '<a href="mailto:'.$personal['email_address'].'">'.$personal['email_address'].'</a>';
 				}
-				echo '<a href="CV.pdf"><img title="Téléchargez version PDF" id="pdf_logo" src="../images/pdf_logo.png"></a>';
+				echo '<a href="CV.pdf"><img title="'. $lang['pdf'].'" id="pdf_logo" src="./images/pdf_logo.png"></a>';
 				?>
 			</span>
 		</div>

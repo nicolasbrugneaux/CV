@@ -13,4 +13,5 @@ $lang['interests'] = "Interests &amp; Hobbies";
 $lang['address'] = "Current addresses";
 $lang['social_media'] = "Social Networks";
 $lang['career'] = "Career";
+$lang['pdf'] = "Download PDF version";
 ?>

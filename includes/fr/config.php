@@ -8,9 +8,9 @@ $personal['email_address'] = 'nicolas.brugneaux@gmail.com';
 $personal['address'] = 'Slotsgade 11, room 23<br/>8700 Horsens<br/>DENMARK<br/><br/>44 A rue de Coswiller<br/>67310 Wasselonne<br/>FRANCE';
 
 // Social links
-$social_media[] = array('Facebook', 'https://facebook.com/nicolas.brugneaux', '../images/facebook.png');
-$social_media[] = array('Twitter', 'https://twitter.com/Nicolas_Bru_', '../images/twitter.png');
-$social_media[] = array('GitHub', 'https://github.com/nicolasbrugneaux', '../images/github.png');
+$social_media[] = array('Facebook', 'https://facebook.com/nicolas.brugneaux');
+$social_media[] = array('Twitter', 'https://twitter.com/Nicolas_Bru_');
+$social_media[] = array('GitHub', 'https://github.com/nicolasbrugneaux');
 
 // Work history
 $work_history[] = array('2011',
