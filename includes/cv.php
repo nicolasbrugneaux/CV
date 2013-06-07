@@ -10,12 +10,13 @@ $settings = array();
 $lang = array();
 if(isset($_GET['en']))
 {
-	require_once('./includes/en/config.php');
+	$inc_path = './includes/en/';
 }
 else if(isset($_GET['fr']))
 {
-	require_once('./includes/fr/config.php');
+	$inc_path = './includes/fr/';
 }
+require_once($inc_path.'config.php');
 
 if (isset($settings['style']) && $settings['style'] == "dark")
 {
@@ -60,6 +61,13 @@ require_once($langfile);
 	<link rel="icon" type="image/png" href="./images/favicon.ico">
 </head>
 <body>
+	<div id="pdf">
+		<object data="./includes/<?php echo $settings['lang'];?>/cv.pdf" width="100%" height="100%" type="application/pdf">
+		  <p>It appears you don't have a PDF plugin for this browser.
+		  No biggie... you can <a href="./includes/<?php echo $_GET['cv'];?>/cv.pdf">click here to
+		  download the PDF file.</a></p>
+		</object>
+	</div>
 	<?php include_once("./includes/analyticstracking.php") ?>
 	<nav>
 			<a id="fr" href="./index.php?fr"></a>
@@ -105,7 +113,7 @@ require_once($langfile);
 				{
 					echo '<a href="mailto:'.$personal['email_address'].'">'.$personal['email_address'].'</a>';
 				}
-				echo '<a href="CV.pdf"><img title="'. $lang['pdf'].'" id="pdf_logo" src="./images/pdf_logo.png"></a>';
+				echo '<input type="image" class="pdf_logo" title="'. $lang['pdf'].'" src="./images/pdf_logo.png"></input>';
 				?>
 			</span>
 			<span id="print_subtitle">
@@ -122,7 +130,7 @@ require_once($langfile);
 				{
 					echo '<a href="mailto:'.$personal['email_address'].'">'.$personal['email_address'].'</a>';
 				}
-				echo '<a href="CV.pdf"><img title="'. $lang['pdf'].'" id="pdf_logo" src="./images/pdf_logo.png"></a>';
+				echo '<input type="image" class="pdf_logo" onclick="show_pdf()" title="'. $lang['pdf'].'" src="./images/pdf_logo.png"></input>';
 				?>
 			</span>
 		</div>
@@ -200,6 +208,15 @@ require_once($langfile);
 		<div id="footer">
 			<p>Site created by <a href="mailto:nicolas.brugneaux@gmail.com">Nicolas Brugneaux</a>. Oct-2012.</p>
 		</div>
+	</div>
+	<div id="scripts">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<script type="text/javascript">
+
+			$(".pdf_logo").click(function() {
+			  $("#pdf").fadeToggle();
+			});
+		</script>
 	</div>
 </body>
 </html>

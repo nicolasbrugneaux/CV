@@ -195,9 +195,19 @@ nav
 	background: url(../images/flag-sprite-small.png) 0px 0px;
 }
 
-#pdf_logo
+.pdf_logo
 {
 	width: 15px;
 	height: 15px;
 	margin-left: 10px;
+}
+#pdf
+{
+	display: none;
+	position: fixed;
+	width: 820px;
+	height: 100%;
+	z-index: 1;
+	left:0;
+	top:0;
 }
