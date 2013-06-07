@@ -64,7 +64,7 @@ require_once($langfile);
 	<div id="pdf">
 		<object data="./includes/<?php echo $settings['lang'];?>/cv.pdf" width="100%" height="100%" type="application/pdf">
 		  <p>It appears you don't have a PDF plugin for this browser.
-		  No biggie... you can <a href="./includes/<?php echo $_GET['cv'];?>/cv.pdf">click here to
+		  No biggie... you can <a href="./includes/<?php echo $settings['lang'];?>/cv.pdf">click here to
 		  download the PDF file.</a></p>
 		</object>
 	</div>
@@ -210,7 +210,7 @@ require_once($langfile);
 		</div>
 	</div>
 	<div id="scripts">
-		<script type="text/javascript" src="js/jquery-1.10.1.min"></script>
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 		<script type="text/javascript">
 
 			$(".pdf_logo").click(function() {
