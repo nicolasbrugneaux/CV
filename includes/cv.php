@@ -210,7 +210,7 @@ require_once($langfile);
 		</div>
 	</div>
 	<div id="scripts">
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.10.1.min"></script>
 		<script type="text/javascript">
 
 			$(".pdf_logo").click(function() {

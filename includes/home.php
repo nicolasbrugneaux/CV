@@ -34,7 +34,7 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.10.1.min"></script>
 	<script type="text/javascript" src="js/jquery.lettering.js"></script>
 	<script>
 		$(document).ready(function() {
