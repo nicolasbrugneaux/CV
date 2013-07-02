@@ -8,7 +8,7 @@
     <title>Error 404</title>
 
     <!-- Le style -->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style.min.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -25,7 +25,7 @@
 
 <body>
 
-  <?php include_once('../pages/nav.php') ?>
+  <?php include_once('../pages/nav.html') ?>
 
   <div class="container">
     <div id="main-content">
@@ -44,7 +44,7 @@
 
   <hr>
   
-  <?php include_once('./pages/footer.php'); ?>
+  <?php include_once('../pages/footer.html'); ?>
 
   <!-- Le javascript
   ================================================== -->
