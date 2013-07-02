@@ -25,38 +25,7 @@
 
 <body>
 
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="brand" href="/#home">Nicolas Brugneaux</a>
-        <div class="nav-collapse collapse">
-          <ul class="nav">
-            <li><a data-icon="&#xe000;" href="/#home" id="menu-home"></a></li>
-            <li></li>
-            <li class="dropdown">
-              <a href="/#" id="menu-about" class="dropdown-toggle" data-toggle="dropdown">
-                About 
-                  <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a href="/#about"> About me</a></li>
-                  <li><a href="/#skills">Skills</a></li>
-                </ul>
-              </li>
-            <li><a href="/#contact" id="menu-contact">Contact</a></li>
-          </ul>
-          <form class="navbar-form pull-right">
-             <a class="btn btn-primary" target="_blank" href="../assets/CV.pdf" data-icon="&#xe06c;"> CV</a>
-          </form>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-  </div><!--/navbar -->
+  <?php include_once('../pages/nav.php') ?>
 
   <div class="container">
     <div id="main-content">
@@ -74,41 +43,8 @@
   </div> <!-- /container -->
 
   <hr>
-
-  <div id="footer">
-    <div class="container">
-      <div class="row-fluid">
-        <div class="span12">
-          <div class="span2">
-            <ul class="unstyled">
-              <li>Navigation<li>
-              <li><a href="/#home">Home</a></li>
-              <li><a href="/#about">About</a></li>
-              <li><a href="/#skills">Skills</a></li>
-              <li><a href="/#contact">Contact</a></li>
-            </ul>
-          </div> 
-          <div class="span2">
-            <ul class="unstyled">
-              <li>Social<li>
-              <li><a target="_blank" href="https://www.github.com/nicolasbrugneaux">Github</a></li>
-              <li><a target="_blank" href="https://www.twitter.com/nbrugneaux">Twitter</a></li>
-              <li><a target="_blank" href="https://www.facebook.com/nicolas.brugneaux">Facebook</a></li>
-              <li><a target="_blank" href="https://plus.google.com/113934921579560371005/">Google +</a></li>
-            </ul>
-          </div>          
-        </div>
-      </div> <!-- /.row-fluid -->
-      <hr>
-      <div class="row-fluid">
-        <div class="span12">
-          <div class="span4">
-            <p class="muted">© 2013 Nicolas Brugneaux.</p>
-          </div>
-        </div>
-      </div> <!-- /.row-fluid -->
-    </div> <!-- /.container -->
-  </div> <!-- /footer -->
+  
+  <?php include_once('./pages/footer.php'); ?>
 
   <!-- Le javascript
   ================================================== -->
