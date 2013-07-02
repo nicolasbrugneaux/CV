@@ -25,26 +25,26 @@
 
 <body>
 
-  <?php include_once('./nav.html') ?>
+  <?php include_once('../pages/nav.html') ?>
 
   <div class="container">
     <div id="main-content">
-    	<div id="error">
-		  <div class="hero-unit center">
-		    <h1>Page Forbidden <small style="color:#F00"> - Error 403</small></h1>
-		    <br />
-		    <p><strong>Ooops.</strong> It looks like the page you requested can't be loaded.<br/>Use your browser's <b>Back</b> button to navigate to the page you have previously come from</p>
-		    <p><b>Or you could just press this neat little button:</b></p>
-		    <a href="/" class="btn btn-large btn-primary"><span data-icon="&#xe000;"></span> Take Me Home</a>
-		  </div>
-		</div>
+      <div id="error">
+        <div class="hero-unit center">
+          <h1>Page Forbidden <small style="color:#F00"> - Error 403</small></h1>
+          <br />
+          <p><strong>Ooops.</strong> It looks like the page you requested can't be loaded.<br/>Use your browser's <b>Back</b> button to navigate to the page you have previously come from</p>
+          <p><b>Or you could just press this neat little button:</b></p>
+          <a href="/" class="btn btn-large btn-primary"><span data-icon="&#xe000;"></span> Take Me Home</a>
+        </div>
+      </div>
     </div>
 
   </div> <!-- /container -->
 
   <hr>
 
-  <?php include_once('./footer.html'); ?>
+  <?php include_once('../pages/footer.html'); ?>
 
   <!-- Le javascript
   ================================================== -->
