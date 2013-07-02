@@ -4,7 +4,8 @@ var pages = [
 	"home",
 	"about",
 	"skills",
-	"contact"
+	"contact",
+	"blog"
 			];
 
 function changePage(value)
@@ -15,7 +16,7 @@ function changePage(value)
 		if(i<index)
 		{
 			$("#main-content").hide("slide", { direction: "right" }, 300, function () {
-				$("#main-content").load("pages/"+pages[i]+".html",function()    {
+				$("#main-content").load("pages/"+pages[i]+".php",function()    {
 					$("#main-content").show("slide", { direction: "left" },500);
 				})
 			});
@@ -23,7 +24,7 @@ function changePage(value)
 		else
 		{
 			$("#main-content").hide("slide", { direction: "left" }, 300, function () {
-				$("#main-content").load("pages/"+pages[i]+".html",function()    {
+				$("#main-content").load("pages/"+pages[i]+".php",function()    {
 					$("#main-content").show("slide", { direction: "right" }, 500);
 				})
 			});
@@ -35,7 +36,7 @@ function changePage(value)
 			else
 				$('#menu-'+pages[j]).parent().removeClass('active');
 		}
-		if(value=="skills")
+		if(value=="skills" || value=="about")
 			$('#menu-about').parent().addClass('active');
 		index=i;
 	}
@@ -43,6 +44,13 @@ function changePage(value)
 
 $(document).ready(function(){ 
 	var i = $.inArray(window.location.hash.substring(1)==""?'home':window.location.hash.substring(1), pages);
-	$("#main-content").load("pages/"+pages[i]+".html");
+	$("#main-content").load((i==-1?"pages/home":"pages/"+pages[i])+".php");
 	index=i;
+
+	$(window).on('hashchange', function(){
+	if($.inArray(window.location.hash.substring(1),pages)>=0)
+		changePage(window.location.hash.substring(1));
+	else
+		changePage("home");
+	});
 });

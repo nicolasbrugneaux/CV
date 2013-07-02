@@ -2,7 +2,7 @@
   <div class="hero-unit">
     <h1>About me ...</h1>
     <img id="avatar" class="pull-right img-rounded" width="140px" src="./img/avatar.png"></img>
-    <p>My name is <a href="#about" onclick="changePage('about');">Nicolas Brugneaux</a> and I am a 20 years old French guy.</p>
+    <p>My name is <a href="#about">Nicolas Brugneaux</a> and I am a 20 years old French guy.</p>
     <p>I am <strong>passionate</strong> and <strong>perseverant</strong>. I <strong>love</strong> traveling.</p>
     <br/>
     <blockquote>
@@ -32,7 +32,7 @@
     <div class="span12">
       <h2>Skills</h2>
       <p>I am a software developer. I love discovering new things, tweaking existing things and I'm charmed by everything around web development.</p>
-      <p><a class="btn btn-primary" href="#skills" onclick="changePage('skills');">See details »</a></p>
+      <p><a class="btn btn-primary" href="#skills">See details »</a></p>
     </div>
   </div>
   <hr>

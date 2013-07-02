@@ -54,22 +54,22 @@ if(isset($_POST) && $_POST!=null)
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="#home" onclick="changePage('home');">Nicolas Brugneaux</a>
+        <a class="brand" href="/">Nicolas Brugneaux</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li><a data-icon="&#xe000;" href="#home" id="menu-home" onclick="changePage('home');"></a></li>
-            <li></li>
+            <li><a data-icon="&#xe000;" href="#home" id="menu-home"></a></li>
             <li class="dropdown">
               <a href="#" id="menu-about" class="dropdown-toggle" data-toggle="dropdown">
                 About 
                   <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="#about" onclick="changePage('about');"> About me</a></li>
-                  <li><a href="#skills" onclick="changePage('skills');">Skills</a></li>
+                  <li><a href="#about">About me</a></li>
+                  <li><a href="#skills">Skills</a></li>
                 </ul>
               </li>
-            <li><a href="#contact" id="menu-contact" onclick="changePage('contact');">Contact</a></li>
+            <li><a href="#contact" id="menu-contact">Contact</a></li>
+            <!-- <li><a href="#blog" id="menu-blog">Blog</a></li> -->
           </ul>
           <form class="navbar-form pull-right">
              <a class="btn btn-primary" target="_blank" href="./assets/CV.pdf" data-icon="&#xe06c;"> CV</a>
@@ -108,10 +108,11 @@ if(isset($_POST) && $_POST!=null)
           <div class="span2">
             <ul class="unstyled">
               <li>Navigation<li>
-              <li><a href="#home" onclick="changePage('home');">Home</a></li>
-              <li><a href="#about" onclick="changePage('about');">About</a></li>
-              <li><a href="#skills" onclick="changePage('skills');">Skills</a></li>
-              <li><a href="#contact" onclick="changePage('contact');">Contact</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <!-- <li><a href="#blog">Blog</a></li> -->
             </ul>
           </div> 
           <div class="span2">
@@ -128,9 +129,12 @@ if(isset($_POST) && $_POST!=null)
       <hr>
       <div class="row-fluid">
         <div class="span12">
-          <div class="span4">
-            <p class="muted">© 2013 Nicolas Brugneaux.</p>
-          </div>
+            <p class="pull-left">
+              <a class="btn btn-info" href="#contact">Created in June 2013 by Nicolas Brugneaux</a>
+            </p>
+            <p class="pull-right">
+              <a class="btn btn-info" target="_blank" href="https://github.com/nicolasbrugneaux/CV">Browse the sourcecode on Github</a>
+            </p>
         </div>
       </div> <!-- /.row-fluid -->
     </div> <!-- /.container -->
