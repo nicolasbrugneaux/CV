@@ -47,7 +47,7 @@
       <div class="span3">
         <h3>Object Oriented</h3>
         <ul class="unstyled">
-          <li>Java
+          <li>Java - <small><i>Android</i></small>
             <div class="progress">
               <div class="bar" style="width: 80%"></div>
             </div>
@@ -100,8 +100,8 @@
     <div class="span4">
       <h2>Operating Systems</h2>
       <ul class="unstyled">
-        <li>Windows</li>
-        <li>Linux</li>
+        <li><span data-icon="&#xe18b;"> </span> Linux</li>
+        <li><span data-icon="&#xe186;"> </span> Windows</li>
       </ul>
    </div>
        <div class="span4">

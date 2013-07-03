@@ -27,7 +27,10 @@
             <span data-icon="&#xe164;">Facebook</span><br/>
           </a>
           <a class="google" target="_blank" href="https://plus.google.com/113934921579560371005/">
-            <span data-icon="&#xe161;">Google +</span>
+            <span data-icon="&#xe161;">Google +</span><br/>
+          </a>
+          <a class="skype" href="callto:nicolas.brugneaux">
+            <span data-icon="&#xe183;">Skype</span>
           </a>
         </address>
       </div>
