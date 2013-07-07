@@ -1,66 +1,80 @@
 .coordinates
 {
 	font-weight: bold;
-	color:@gray;
+	color: @gray;
 	a 
 	{
+		padding-top: 10px;
 		&:hover
 		{
-			text-decoration: none;
-		}
-	}
-	.twitter
-	{
-		color:@gray;
-		&:hover
-		{
-			color:@twitter;
-		}
-	}
-	.github
-	{
-		color:@gray;
-		&:hover
-		{
-			color:@github;
-		}
-	}
-	.facebook
-	{
-		color:@gray;
-		&:hover
-		{
-			color:@facebook;
-		}
-	}
-	.google
-	{
-		color:@gray;
-		&:hover
-		{
-			color:@google;
-		}
-	}	
-	.skype
-	{
-		color:@gray;
-		&:hover
-		{
-			color: #007fff;
+			color:#fff;
+			text-decoration: #fff;
 		}
 	}
 	[data-icon]:before
 	{
 		font-size: 25px;
-		margin-right: 10px;
+		margin-left: 2px;
+		margin-right: 2px;
+	}
+	&.social
+	{
+		a
+		{
+			color: @gray;
+			&:hover
+			{
+				background-color: #fff;
+			}
+			&.twitter
+			{
+				&:hover
+				{
+					color:@twitter;
+				}
+			}
+			&.github
+			{
+				&:hover
+				{
+					color:@github;
+				}
+			}
+			&.facebook
+			{
+				&:hover
+				{
+					color:@facebook;
+				}
+			}
+			&.google
+			{
+				&:hover
+				{
+					color:@google;
+				}
+			}	
+			&.skype
+			{
+				&:hover
+				{
+					color: #007fff;
+				}
+			}
+		}
+		[data-icon]:before
+		{
+			font-size: 50px;
+		}
 	}
 
 }
 .mail a
 {
-	color:@gray;
+	color: @gray;
 	&:hover
 	{
 		color: #007fff;
+		background-color: #fff;
 	}
 }

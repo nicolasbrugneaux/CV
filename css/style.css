@@ -212,10 +212,10 @@ a {
   color: #007fff;
   text-decoration: none;
 }
-a:hover,
-a:focus {
-  color: #0066cc;
-  text-decoration: underline;
+a:hover:not(.brand),
+a:focus:not(.brand) {
+  color: #fff;
+  background-color: #007fff;
 }
 .img-rounded {
   -webkit-border-radius: 6px;
@@ -8671,48 +8671,62 @@ you can use the generic selector below, but it's slower:
   font-weight: bold;
   color: #555555;
 }
+.coordinates a {
+  padding-top: 10px;
+}
 .coordinates a:hover {
-  text-decoration: none;
+  color: #fff;
+  text-decoration: #fff;
 }
 .coordinates .twitter {
   color: #555555;
 }
 .coordinates .twitter:hover {
   color: #4099ff;
+  background-color: #fff;
 }
 .coordinates .github {
   color: #555555;
 }
 .coordinates .github:hover {
   color: #000000;
+  background-color: #fff;
 }
 .coordinates .facebook {
   color: #555555;
 }
 .coordinates .facebook:hover {
   color: #4c66a4;
+  background-color: #fff;
 }
 .coordinates .google {
   color: #555555;
 }
 .coordinates .google:hover {
   color: #c92b16;
+  background-color: #fff;
 }
 .coordinates .skype {
   color: #555555;
 }
 .coordinates .skype:hover {
   color: #007fff;
+  background-color: #fff;
 }
 .coordinates [data-icon]:before {
   font-size: 25px;
-  margin-right: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.coordinates.social [data-icon]:before {
+  font-size: 50px;
 }
 .mail a {
   color: #555555;
 }
 .mail a:hover {
   color: #007fff;
+  background-color: #fff;
 }
 /*--------------------------*/
 /* navbar */

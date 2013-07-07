@@ -18,19 +18,19 @@
         <hr>
         <address class="coordinates social">
           <a class="github" target="_blank" href="https://www.github.com/nicolasbrugneaux">
-            <span data-icon="&#xe196;">Github</span><br/>
+            <span data-icon="&#xe196;"></span>
           </a>
           <a class="twitter" target="_blank" href="https://www.twitter.com/nbrugneaux">
-            <span data-icon="&#xe169;">Twitter</span><br/>
+            <span data-icon="&#xe169;"></span>
           </a>
           <a class="facebook" target="_blank" href="https://www.facebook.com/nicolas.brugneaux">
-            <span data-icon="&#xe164;">Facebook</span><br/>
+            <span data-icon="&#xe164;"></span>
           </a>
           <a class="google" target="_blank" href="https://plus.google.com/113934921579560371005/">
-            <span data-icon="&#xe161;">Google +</span><br/>
+            <span data-icon="&#xe161;"></span>
           </a>
           <a class="skype" href="callto:nicolas.brugneaux">
-            <span data-icon="&#xe183;">Skype</span>
+            <span data-icon="&#xe183;"></span>
           </a>
         </address>
       </div>
