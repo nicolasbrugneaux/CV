@@ -35,7 +35,7 @@
         </address>
       </div>
       <div class="span6">
-        <form action="#" method="post" id="contactForm">
+        <form method="post" id="contactForm">
           <div class="controls controls-row">
             <input id="name" required="true" name="name" type="text" class="span3" placeholder="Name"> 
             <input id="email" required="true" name="email" type="email" class="span3" placeholder="Email address">

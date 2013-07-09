@@ -2,16 +2,17 @@
 if(isset($_POST) && $_POST!=null)
 {
   
-  try{
-    mail( "contact@nicolasbrugneaux.me",
+  if(
+    @mail( "contact@nicolasbrugneaux.me",
           $_POST['subject'],
           $_POST['message'],
           "From: " . $_POST['email']
-    );
+    ))
+  {
     $_SESSION['flash']['message']="Your message has been successfuly sent.";
     $_SESSION['flash']['success']=1;
   }
-  catch(Exception $e)
+  else
   {
     $_SESSION['flash']['message']="An error has occured.";
     $_SESSION['flash']['success']=0;   
@@ -49,27 +50,27 @@ if(isset($_POST) && $_POST!=null)
   <?php include_once('./pages/nav.html') ?>
 
   <div class="container">
+    <div class="notifications">
     <?php
       if(isset($_SESSION) && $_SESSION['flash']!=null)
       {
         ?>
-        <div class="notification">
           <div class="alert <?php echo $_SESSION['flash']['success'] ? "alert-success" : "alert-error";?>">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             <p><?php echo  $_SESSION['flash']['message']; ?></p>
           </div>
-        </div> <!-- /.notification -->
         <?php
         $_SESSION['flash']=null;
       }
       ?>
       <noscript>
-      <div class="notification">
-        <div class="alert alert-warning"><button class="close" type="button" data-dismiss="alert">&times;</button>
-        <p>For full functionality of this site it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</p>
+        <div class="alert alert-warning">
+          <button class="close" type="button" data-dismiss="alert">&times;</button>
+          <p>For full functionality of this site it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</p>
         </div>
-      </div> <!-- /.notification -->
       </noscript>
+    </div> <!-- /.notifications -->
+
     <div id="main-content">
     </div>
 
@@ -84,9 +85,9 @@ if(isset($_POST) && $_POST!=null)
   <script src="./js/jquery.1.10.1.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/jquery-ui-1.10.3.min.js"></script>
-  <script src="./js/pages.js"></script>
-  <script src="./js/notifications.js"></script>
-  <script src="./js/googleAnalytics.js"></script>
+  <script src="./js/pages.min.js"></script>
+  <script src="./js/notifications.min.js"></script>
+  <script src="./js/googleAnalytics.min.js"></script>
 
 </body>
 </html>

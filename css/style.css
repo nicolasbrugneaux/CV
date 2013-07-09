@@ -3,7 +3,7 @@
 @import url('//fonts.googleapis.com/css?family=Ubuntu:400italic,700italic,400,700');
 /*  variables */
 /* from bootstrap */
-/*!
+/*
  * Bootstrap v2.3.2
  *
  * Copyright 2012 Twitter, Inc
@@ -2710,9 +2710,9 @@ button.close {
 .btn.active,
 .btn.disabled,
 .btn[disabled] {
-  color: #999999;
-  background-color: #c8c8c8;
-  *background-color: #bbbbbb;
+  color: #999999 !important;
+  background-color: #c8c8c8 !important;
+  *background-color: #bbbbbb !important;
 }
 .btn:active,
 .btn.active {
@@ -2810,7 +2810,7 @@ input[type="button"].btn-block {
 .btn-success.active,
 .btn-info.active,
 .btn-inverse.active {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 .btn-primary {
   color: #ffffff;
@@ -2834,9 +2834,9 @@ input[type="button"].btn-block {
 .btn-primary.active,
 .btn-primary.disabled,
 .btn-primary[disabled] {
-  color: #ffffff;
-  background-color: #0072e6;
-  *background-color: #0066cc;
+  color: #ffffff !important;
+  background-color: #0072e6 !important;
+  *background-color: #0066cc !important;
 }
 .btn-primary:active,
 .btn-primary.active {
@@ -2864,9 +2864,9 @@ input[type="button"].btn-block {
 .btn-warning.active,
 .btn-warning.disabled,
 .btn-warning[disabled] {
-  color: #ffffff;
-  background-color: #fe6600;
-  *background-color: #e45c00;
+  color: #ffffff !important;
+  background-color: #fe6600 !important;
+  *background-color: #e45c00 !important;
 }
 .btn-warning:active,
 .btn-warning.active {
@@ -2894,9 +2894,9 @@ input[type="button"].btn-block {
 .btn-danger.active,
 .btn-danger.disabled,
 .btn-danger[disabled] {
-  color: #ffffff;
-  background-color: #e60033;
-  *background-color: #cc002e;
+  color: #ffffff !important;
+  background-color: #e60033 !important;
+  *background-color: #cc002e !important;
 }
 .btn-danger:active,
 .btn-danger.active {
@@ -2924,9 +2924,9 @@ input[type="button"].btn-block {
 .btn-success.active,
 .btn-success.disabled,
 .btn-success[disabled] {
-  color: #ffffff;
-  background-color: #379f15;
-  *background-color: #2f8912;
+  color: #ffffff !important;
+  background-color: #379f15 !important;
+  *background-color: #2f8912 !important;
 }
 .btn-success:active,
 .btn-success.active {
@@ -2954,9 +2954,9 @@ input[type="button"].btn-block {
 .btn-info.active,
 .btn-info.disabled,
 .btn-info[disabled] {
-  color: #ffffff;
-  background-color: #8d46b0;
-  *background-color: #7e3f9d;
+  color: #ffffff !important;
+  background-color: #8d46b0 !important;
+  *background-color: #7e3f9d !important;
 }
 .btn-info:active,
 .btn-info.active {
@@ -2984,9 +2984,9 @@ input[type="button"].btn-block {
 .btn-inverse.active,
 .btn-inverse.disabled,
 .btn-inverse[disabled] {
-  color: #ffffff;
-  background-color: #000000;
-  *background-color: #000000;
+  color: #ffffff !important;
+  background-color: #000000 !important;
+  *background-color: #000000 !important;
 }
 .btn-inverse:active,
 .btn-inverse.active {
@@ -3020,7 +3020,7 @@ input[type="submit"].btn.btn-mini {
 .btn-link,
 .btn-link:active,
 .btn-link[disabled] {
-  background-color: transparent;
+  background-color: transparent !important;
   background-image: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -3038,7 +3038,7 @@ input[type="submit"].btn.btn-mini {
 .btn-link:focus {
   color: #0066cc;
   text-decoration: underline;
-  background-color: transparent;
+  background-color: transparent !important;
 }
 .btn-link[disabled]:hover,
 .btn-link[disabled]:focus {
@@ -4787,49 +4787,109 @@ a.label:hover,
 a.label:focus,
 a.badge:hover,
 a.badge:focus {
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
   cursor: pointer;
 }
 .label-important,
 .badge-important {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
+}
+.label-important.hover,
+.badge-important.hover,
+.label-important.focus,
+.badge-important.focus {
+  background-color: #ffffff !important;
 }
 .label-important[href],
 .badge-important[href] {
-  background-color: #e6e6e6;
+  background-color: #e6e6e6 !important;
+}
+.label-important[href].hover,
+.badge-important[href].hover,
+.label-important[href].focus,
+.badge-important[href].focus {
+  background-color: #e6e6e6 !important;
 }
 .label-warning,
 .badge-warning {
-  background-color: #ff7518;
+  background-color: #ff7518 !important;
+}
+.label-warning.hover,
+.badge-warning.hover,
+.label-warning.focus,
+.badge-warning.focus {
+  background-color: #ff7518 !important;
 }
 .label-warning[href],
 .badge-warning[href] {
-  background-color: #e45c00;
+  background-color: #e45c00 !important;
+}
+.label-warning[href].hover,
+.badge-warning[href].hover,
+.label-warning[href].focus,
+.badge-warning[href].focus {
+  background-color: #e45c00 !important;
 }
 .label-success,
 .badge-success {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
+}
+.label-success.hover,
+.badge-success.hover,
+.label-success.focus,
+.badge-success.focus {
+  background-color: #ffffff !important;
 }
 .label-success[href],
 .badge-success[href] {
-  background-color: #e6e6e6;
+  background-color: #e6e6e6 !important;
+}
+.label-success[href].hover,
+.badge-success[href].hover,
+.label-success[href].focus,
+.badge-success[href].focus {
+  background-color: #e6e6e6 !important;
 }
 .label-info,
 .badge-info {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
+}
+.label-info.hover,
+.badge-info.hover,
+.label-info.focus,
+.badge-info.focus {
+  background-color: #ffffff !important;
 }
 .label-info[href],
 .badge-info[href] {
-  background-color: #e6e6e6;
+  background-color: #e6e6e6 !important;
+}
+.label-info[href].hover,
+.badge-info[href].hover,
+.label-info[href].focus,
+.badge-info[href].focus {
+  background-color: #e6e6e6 !important;
 }
 .label-inverse,
 .badge-inverse {
-  background-color: #999999;
+  background-color: #999999 !important;
+}
+.label-inverse.hover,
+.badge-inverse.hover,
+.label-inverse.focus,
+.badge-inverse.focus {
+  background-color: #999999 !important;
 }
 .label-inverse[href],
 .badge-inverse[href] {
-  background-color: #808080;
+  background-color: #808080 !important;
+}
+.label-inverse[href].hover,
+.badge-inverse[href].hover,
+.label-inverse[href].focus,
+.badge-inverse[href].focus {
+  background-color: #808080 !important;
 }
 .btn .label,
 .btn .badge {
@@ -5757,7 +5817,7 @@ a.thumbnail:hover {
 .affix {
   position: fixed;
 }
-/*!
+/*
  * Bootstrap Responsive v2.3.2
  *
  * Copyright 2012 Twitter, Inc
@@ -8678,45 +8738,31 @@ you can use the generic selector below, but it's slower:
   color: #fff;
   text-decoration: #fff;
 }
-.coordinates .twitter {
-  color: #555555;
-}
-.coordinates .twitter:hover {
-  color: #4099ff;
-  background-color: #fff;
-}
-.coordinates .github {
-  color: #555555;
-}
-.coordinates .github:hover {
-  color: #000000;
-  background-color: #fff;
-}
-.coordinates .facebook {
-  color: #555555;
-}
-.coordinates .facebook:hover {
-  color: #4c66a4;
-  background-color: #fff;
-}
-.coordinates .google {
-  color: #555555;
-}
-.coordinates .google:hover {
-  color: #c92b16;
-  background-color: #fff;
-}
-.coordinates .skype {
-  color: #555555;
-}
-.coordinates .skype:hover {
-  color: #007fff;
-  background-color: #fff;
-}
 .coordinates [data-icon]:before {
   font-size: 25px;
   margin-left: 2px;
   margin-right: 2px;
+}
+.coordinates.social a {
+  color: #555555;
+}
+.coordinates.social a:hover {
+  background-color: #fff;
+}
+.coordinates.social a.twitter:hover {
+  color: #4099ff;
+}
+.coordinates.social a.github:hover {
+  color: #000000;
+}
+.coordinates.social a.facebook:hover {
+  color: #4c66a4;
+}
+.coordinates.social a.google:hover {
+  color: #c92b16;
+}
+.coordinates.social a.skype:hover {
+  color: #007fff;
 }
 .coordinates.social [data-icon]:before {
   font-size: 50px;
@@ -8740,8 +8786,17 @@ you can use the generic selector below, but it's slower:
 }
 /*--------------------------*/
 /* notification */
-.notification {
+.notifications {
   margin-top: 55px;
+}
+.notifications .alert a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.notifications .alert a:hover,
+.notifications .alert a:focus {
+  background-color: inherit;
 }
 /*--------------------------*/
 /* scrollbar */
