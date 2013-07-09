@@ -63,6 +63,13 @@ if(isset($_POST) && $_POST!=null)
         $_SESSION['flash']=null;
       }
       ?>
+      <noscript>
+      <div class="notification">
+        <div class="alert alert-warning"><button class="close" type="button" data-dismiss="alert">&times;</button>
+        <p>For full functionality of this site it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</p>
+        </div>
+      </div> <!-- /.notification -->
+      </noscript>
     <div id="main-content">
     </div>
 
