@@ -1,0 +1,66 @@
+/*--------------------------*/
+/* navbar */
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+.navbar .brand {
+  font-family: 'Gloria Hallelujah', cursive;
+  &:hover
+  {
+    color: #fff;
+  }
+}
+
+@media (min-width: 980px) {
+  .navbar .brand {
+     border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+.navbar .nav li.dropdown>a:hover .caret,
+.navbar .nav li.dropdown>a:focus .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+.navbar .nav>li>a:focus,
+.navbar .nav>li>a:hover {
+  color: #fff;
+}
+
+
+/*--------------------------*/
+/* notification */
+.notifications
+{
+	margin-top: 55px;
+  .alert a
+  {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    &:hover, &:focus
+    {
+      background-color: inherit;
+    }
+  }
+}
+
+
+/*--------------------------*/
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: @gray;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: @gray; 
+}

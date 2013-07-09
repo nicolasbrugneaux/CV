@@ -1,6 +1,6 @@
 @import url('//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700');
 
-@import url('//fonts.googleapis.com/css?family=Ubuntu:400italic,700italic,400,700');
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
 /*  variables */
 /* from bootstrap */
 /*
@@ -8774,15 +8774,28 @@ you can use the generic selector below, but it's slower:
   color: #007fff;
   background-color: #fff;
 }
+/* my rules */
 /*--------------------------*/
 /* navbar */
 .navbar .brand {
-  font-family: 'Ubuntu', cursive;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.navbar .brand:hover {
+  color: #fff;
 }
 @media (min-width: 980px) {
   .navbar .brand {
     border-right: 1px solid rgba(0, 0, 0, 0.2);
   }
+}
+.navbar .nav li.dropdown > a:hover .caret,
+.navbar .nav li.dropdown > a:focus .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  color: #fff;
 }
 /*--------------------------*/
 /* notification */
