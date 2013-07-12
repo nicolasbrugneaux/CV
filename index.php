@@ -48,33 +48,34 @@ if(isset($_POST) && $_POST!=null)
 <body>
 
   <?php include_once('./pages/nav.html') ?>
-
-  <div class="container">
-    <div class="notifications">
-    <?php
-      if(isset($_SESSION) && $_SESSION['flash']!=null)
-      {
+  <div class="content">
+    <div class="container">
+      <div class="notifications">
+      <?php
+        if(isset($_SESSION) && $_SESSION['flash']!=null)
+        {
+          ?>
+            <div class="alert <?php echo $_SESSION['flash']['success'] ? "alert-success" : "alert-error";?>">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <p><?php echo  $_SESSION['flash']['message']; ?></p>
+            </div>
+          <?php
+          $_SESSION['flash']=null;
+        }
         ?>
-          <div class="alert <?php echo $_SESSION['flash']['success'] ? "alert-success" : "alert-error";?>">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <p><?php echo  $_SESSION['flash']['message']; ?></p>
+        <noscript>
+          <div class="alert alert-warning">
+            <button class="close" type="button" data-dismiss="alert">&times;</button>
+            <p>For full functionality of this site it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</p>
           </div>
-        <?php
-        $_SESSION['flash']=null;
-      }
-      ?>
-      <noscript>
-        <div class="alert alert-warning">
-          <button class="close" type="button" data-dismiss="alert">&times;</button>
-          <p>For full functionality of this site it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</p>
-        </div>
-      </noscript>
-    </div> <!-- /.notifications -->
+        </noscript>
+      </div> <!-- /.notifications -->
 
-    <div id="main-content">
-    </div>
+      <div id="main-content">
+      </div>
 
-  </div> <!-- /container -->
+    </div> <!-- /container -->
+  </div> <!-- /content -->
 
   <hr>
 
