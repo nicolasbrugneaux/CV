@@ -1,3 +1,6 @@
+/*
+@author: nicolasbrugneaux.me
+*/
 var index=0;
 
 var pages = [
@@ -18,6 +21,7 @@ function changePage(value)
 			$("#main-content").hide("slide", { direction: "right" }, 300, function () {
 				$("#main-content").load("pages/"+pages[i]+".php",function()    {
 					$("#main-content").show("slide", { direction: "left" },500);
+					linkify( 'a.no-btn' );
 				})
 			});
 		}
@@ -26,6 +30,7 @@ function changePage(value)
 			$("#main-content").hide("slide", { direction: "left" }, 300, function () {
 				$("#main-content").load("pages/"+pages[i]+".php",function()    {
 					$("#main-content").show("slide", { direction: "right" }, 500);
+					linkify( 'a.no-btn' );
 				})
 			});
 		}
@@ -44,7 +49,9 @@ function changePage(value)
 
 $(document).ready(function(){ 
 	var i = $.inArray(window.location.hash.substring(1)==""?'home':window.location.hash.substring(1), pages);
-	$("#main-content").load((i==-1?"pages/home":"pages/"+pages[i])+".php");
+	$("#main-content").load((i==-1?"pages/home":"pages/"+pages[i])+".php", function(){
+		linkify( 'a.no-btn' );
+	});
 	index=i;
 
 	$(window).on('hashchange', function(){

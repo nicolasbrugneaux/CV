@@ -86,6 +86,7 @@ if(isset($_POST) && $_POST!=null)
   <script src="./js/jquery.1.10.1.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/jquery-ui-1.10.3.min.js"></script>
+  <script src="./js/linkify.min.js"></script>
   <script src="./js/pages.min.js"></script>
   <script src="./js/notifications.min.js"></script>
   <script src="./js/googleAnalytics.min.js"></script>

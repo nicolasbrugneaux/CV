@@ -1,3 +1,6 @@
+/*
+@author: nicolasbrugneaux.me
+*/
 $(document).ready(function(){
 	if ( $(".notifications").children().size() == 1 )
 		$(".notifications").hide();
