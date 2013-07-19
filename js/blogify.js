@@ -45,10 +45,14 @@ function blogify () {
 				   				//TWEET BUTTON
 
 				   				+		"<a class='btn twitter'"
-				   				+			"https://twitter.com/share?url="+"http://nicolasbrugneaux.me/posts/?id="+data[i]['id']+">"
+				   				+			"href='https://twitter.com/share"
+				   				+			"?url="+"http://nicolasbrugneaux.me/posts/?id="+data[i]['id']
+				   				+			"&via=nicolasbrugneaux.me"
+				   				+			"&text="+data[i]['title']+" -'"
+				   				+			" target='_blank'>"
 				   				+			"<span data-icon='&#xe169;'> </span> Tweet"
 				   				+		"</a>"
-
+				   				
 								+		"<button class='btn' data-dismiss='modal' aria-hidden='true'>Close</button>"
 								+	"</div><!-- .modal-footer -->"
 					   			+"</div><!-- #modal-id -->"
