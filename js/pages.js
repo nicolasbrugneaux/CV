@@ -1,6 +1,6 @@
-/*
-@author: nicolasbrugneaux.me
-*/
+/*!
+ * @author: nicolasbrugneaux.me
+ */
 var index=0;
 
 var pages = [
@@ -10,7 +10,20 @@ var pages = [
 	"contact",
 	"blog"
 			];
-
+function loadFrom(from, index)
+{
+	var to = from=="right"?"left":"right";
+	$("#main-content").hide("slide", { direction: from }, 300, function () {
+		$("#main-content").load("pages/"+pages[index]+".php",function()    {
+			$("#main-content").show("slide", { direction: to },500);
+			if(window.location.hash.substring(1)=="blog")
+			{
+				blogify();
+			}
+			linkify( 'a.no-btn' );
+		})
+	});
+}
 function changePage(value)
 {
 	var i = $.inArray(value, pages);
@@ -18,21 +31,11 @@ function changePage(value)
 	{
 		if(i<index)
 		{
-			$("#main-content").hide("slide", { direction: "right" }, 300, function () {
-				$("#main-content").load("pages/"+pages[i]+".php",function()    {
-					$("#main-content").show("slide", { direction: "left" },500);
-					linkify( 'a.no-btn' );
-				})
-			});
+			loadFrom("right", i);
 		}
 		else
 		{
-			$("#main-content").hide("slide", { direction: "left" }, 300, function () {
-				$("#main-content").load("pages/"+pages[i]+".php",function()    {
-					$("#main-content").show("slide", { direction: "right" }, 500);
-					linkify( 'a.no-btn' );
-				})
-			});
+			loadFrom("left", i);
 		}
 		for(var j=0;j<pages.length;j++)
 		{
@@ -51,6 +54,10 @@ $(document).ready(function(){
 	var i = $.inArray(window.location.hash.substring(1)==""?'home':window.location.hash.substring(1), pages);
 	$("#main-content").load((i==-1?"pages/home":"pages/"+pages[i])+".php", function(){
 		linkify( 'a.no-btn' );
+		if(window.location.hash.substring(1)=="blog")
+		{
+			blogify();
+		}
 	});
 	index=i;
 

@@ -122,3 +122,27 @@
     -webkit-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
        -moz-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
 }
+
+/*--------------------------*/
+/* spinner ajax */
+@keyframes anim-rotate{
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+.spinner{
+  font-size:5em;
+  line-height: 1;
+  width: 200px;
+  height: 200px;
+  /*animation*/
+  -webkit-animation:anim-rotate 1s infinite linear;
+     -moz-animation:anim-rotate 1s infinite linear;
+      -ms-animation:anim-rotate 1s infinite linear;
+       -o-animation:anim-rotate 1s infinite linear;
+          animation:anim-rotate 1s infinite linear;
+  text-shadow:0 0 .25em rgba(255,255,255, .3);
+}

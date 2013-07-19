@@ -1,4 +1,4 @@
-/*
+/*!
 inspired by hakim.se
 */
 var supports3DTransforms =  document.body.style['webkitPerspective'] !== undefined || 

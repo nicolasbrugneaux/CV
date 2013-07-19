@@ -1,4 +1,4 @@
-/*
+/*!
 @author: nicolasbrugneaux.me
 */
 $(document).ready(function(){
