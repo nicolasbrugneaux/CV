@@ -1,4 +1,10 @@
 <?php
+session_start();
+if(!isset($_SESSION) || $_SESSION == null)
+{
+	header("location:/403/");
+	die();
+}
 if(isset($_POST) && $_POST!=null)
 {
   
@@ -17,11 +23,6 @@ if(isset($_POST) && $_POST!=null)
     $_SESSION['flash']['message']="An error has occured.";
     $_SESSION['flash']['success']=0;   
   }
-}
-$post_id = null;
-if(isset($_GET) && $_GET!=null && $_GET['id']!=null)
-{
-  $post_id = $_GET['id'];
 }
 ?>
 
@@ -52,12 +53,12 @@ if(isset($_GET) && $_GET!=null && $_GET['id']!=null)
 
 <body>
 
-  <?php include_once('../pages/nav.html') ?>
+  <?php include_once('../pages/nav.php'); include_once('../pages/login.php'); ?>
   <div class="content">
     <div class="container">
       <div class="notifications">
       <?php
-        if(isset($_SESSION) && $_SESSION['flash']!=null)
+        if(isset($_SESSION) && $_SESSION!=null && isset($_SESSION['flash']) && $_SESSION['flash']!=null)
         {
           ?>
             <div class="alert <?php echo $_SESSION['flash']['success'] ? "alert-success" : "alert-error";?>">
@@ -65,7 +66,7 @@ if(isset($_GET) && $_GET!=null && $_GET['id']!=null)
               <p><?php echo  $_SESSION['flash']['message']; ?></p>
             </div>
           <?php
-          $_SESSION['flash']=null;
+          unset ($_SESSION['flash'] );
         }
         ?>
         <noscript>
@@ -77,72 +78,24 @@ if(isset($_GET) && $_GET!=null && $_GET['id']!=null)
       </div> <!-- /.notifications -->
 
       <div id="main-content">
-        <?php
-        if($post_id != null)
-        {
-          include_once('../database/config.php');
-          $result = mysqli_query(
-            $con,
-            "SELECT posts.id as id, posts.title as title, posts.body as body, users.name as author, DATE_FORMAT(posts.created,'%d-%b-%Y') as created"
-            ." FROM posts"
-            ." JOIN users ON posts.author = users.id"
-            ." WHERE posts.id = $post_id"
-          );
-          $array = array();
-          while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-            array_push($array,$row);
-          }
-          $array = $array[0];
-          ?>
-
-          <div class="hero-unit">
-            <h1><?php echo $array['title']; ?></h1>
-            <p><b><?php echo $array['author'];?></b>, <i><?php echo $array['created'];?></i></p>
-          </div>
-          <div class= "posts">
-            <div class="well">
-              <?php echo $array['body'];?>
-            </div>
-            <div class="social">
-              <?php
-              include('../util/tokenTruncate.php');
-              
-              echo (
-                  //FACEBOOK SHARE BUTTON
-                  "<div class='pull-right'>"
-                  .  "<a class='btn facebook'"
-                  .     "href='http://www.facebook.com/sharer.php?s=100"
-                  .       "&p[title]=".$array['title']
-                  .       "&p[summary]=".preg_replace('/<[^>]*>/', '', tokenTruncate($array['body'], 100) ) . "..."
-                  .       "&p[url]="."http://nicolasbrugneaux.me/posts/?id=".$array['id']."'"
-                  //.       "&p[images[0]]="
-                  .     " target='_blank'>"
-                  .     "<span data-icon='&#xe164;'> </span>"
-                  .     " Share"
-                  .   "</a> "
-                  //TWEET BUTTON
-                    .   " <a class='btn twitter'"
-                    .     "href='https://twitter.com/share"
-                    .     "?url="."http://nicolasbrugneaux.me/posts/?id=".$array['id']
-                    .     "&via=nicolasbrugneaux.me"
-                    .     "&text=".$array['title']." -'"
-                    .     " target='_blank'>"
-                    .     "<span data-icon='&#xe169;'> </span> Tweet"
-                    .   "</a>"
-                    ."</div>"
-                    );
-              ?>
-            </div>
-          </div>
-        </div>
-        <?php
-        }
-        else
-        {
-          header("Location: /#blog");
-          exit;
-        }
-        ?>
+		<?php
+			if(isset($_SESSION) && $_SESSION != null)
+			{
+				if(isset($_SESSION['login']) && $_SESSION['login']!=null && isset($_SESSION['login']["username"]) && isset($_SESSION['login']["password"]) && isset($_SESSION['login']["name"]))
+				{
+				?>
+					<div class="hero-unit"><h1>You are loggued.</h1></div>
+					<!-- todo -->
+				<?php
+				}
+			}
+			else
+			{
+				header("location:/403/");
+				die();
+			}
+		?>
+      </div>
 
     </div> <!-- /container -->
   </div> <!-- /content -->
@@ -156,9 +109,6 @@ if(isset($_GET) && $_GET!=null && $_GET['id']!=null)
   <script src="../js/jquery.1.10.1.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/jquery-ui-1.10.3.min.js"></script>
-  <script src="../js/linkify.min.js"></script>
-  <script src="../js/blogify.min.js"></script>
-  <script src="../js/pages.min.js"></script>
   <script src="../js/notifications.min.js"></script>
   <script src="../js/googleAnalytics.min.js"></script>
 

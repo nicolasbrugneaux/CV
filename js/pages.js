@@ -37,7 +37,7 @@ function changePage(value)
 		{
 			loadFrom("left", i);
 		}
-		for(var j=0;j<pages.length;j++)
+		for(var j=0, l=pages.length; j<l; j++)
 		{
 			if(j==i)
 				$('#menu-'+pages[j]).parent().addClass('active');

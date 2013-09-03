@@ -105,15 +105,26 @@ if(isset($_GET) && $_GET!=null && $_GET['id']!=null)
             </div>
             <div class="social">
               <?php
-              include('../util/tokenTruncate.php');
-              
+              function tokenTruncate($string, $your_desired_width) {
+                $parts = preg_split('/([\s\n\r]+)/', $string, null, PREG_SPLIT_DELIM_CAPTURE);
+                $parts_count = count($parts);
+
+                $length = 0;
+                $last_part = 0;
+                for (; $last_part < $parts_count; ++$last_part) {
+                  $length += strlen($parts[$last_part]);
+                  if ($length > $your_desired_width) { break; }
+                }
+
+                return implode(array_slice($parts, 0, $last_part));
+              }
               echo (
                   //FACEBOOK SHARE BUTTON
                   "<div class='pull-right'>"
                   .  "<a class='btn facebook'"
                   .     "href='http://www.facebook.com/sharer.php?s=100"
                   .       "&p[title]=".$array['title']
-                  .       "&p[summary]=".preg_replace('/<[^>]*>/', '', tokenTruncate($array['body'], 100) ) . "..."
+                  .       "&p[summary]=". tokenTruncate($array['body'], 100) . "..."
                   .       "&p[url]="."http://nicolasbrugneaux.me/posts/?id=".$array['id']."'"
                   //.       "&p[images[0]]="
                   .     " target='_blank'>"

@@ -1,0 +1,2 @@
+<p data-height="148" data-theme-id="926" data-slug-hash="jogpw" data-user="nicolasbrugneaux" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/nicolasbrugneaux/pen/jogpw'>checkStrength</a> by Nicolas Brugneaux (<a href='http://codepen.io/nicolasbrugneaux'>@nicolasbrugneaux</a>) on <a href='http://codepen.io'>CodePen</a></p>
+<script async src="http://codepen.io/assets/embed/ei.js"></script>

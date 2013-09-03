@@ -10,7 +10,7 @@ function blogify () {
 		success: function(data)         	//on recieve of reply
 		{
 			var content ="";
-			for (var i = 0; i < data.length; i++) 
+			for (var i = 0, len=data.length; i < len; i++) 
 			{
 				if ( i == 0)
 				{
@@ -34,8 +34,8 @@ function blogify () {
 				   				//FACEBOOK SHARE BUTTON
 				   				+		"<a class='btn facebook'"
 								+			"href='http://www.facebook.com/sharer.php?s=100"
-								+				"&p[title]="+data[i]['title']
-								+				"&p[summary]="+$.trim(data[i]['body']).substring(0, 100).split(" ").slice(0, -1).join(" ") + "..."
+								+				"&p[title]="+data[i]['title'].replace(/<[^>]*>/g, '')
+								+				"&p[summary]="+$.trim(data[i]['body'].replace(/<[^>]*>/g, '')).substring(0, 100).split(" ").slice(0, -1).join(" ") + "..."
 								+				"&p[url]="+"http://nicolasbrugneaux.me/posts/?id="+data[i]['id']+"'"
 								//+				"&p[images[0]]="
 								+			" target='_blank'>"
@@ -63,12 +63,12 @@ function blogify () {
 				}
 				else
 				{
-					content += (i%3 == 1) ?"<hr><div class='row'>":"";
+					content += (i%3 == 1) ?"<hr><div class='row previews'>":"";
 						content +="<div class='span4'>"
 						   			+"<h2>"+data[i]['title']+"</h2>"
 						   			+"<small><b>By " + data[i]['author'] + "</b>"
 						   			+", <i>" + data[i]['created'] + "</i></small><br>"
-						   			+"<div class='post'>"  + $.trim(data[i]['body']).substring(0, 100).split(" ").slice(0, -1).join(" ") + "..." + "</div>"
+						   			+"<div class='post'>"  + $.trim(data[i]['body']).substring(0, 200).split(" ").slice(0, -1).join(" ") + "..." + "</div>"
 						   			+"<div id='modal-"+data[i]['id']+"'class='modal hide fade' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>"
 						   			+	"<div class='modal-header'>"
 						   			+		"<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button>"
@@ -85,8 +85,8 @@ function blogify () {
 
 					   				+		"<a class='btn facebook'"
 									+			"href='http://www.facebook.com/sharer.php?s=100"
-									+				"&p[title]="+data[i]['title']
-									+				"&p[summary]="+$.trim(data[i]['body']).substring(0, 100).split(" ").slice(0, -1).join(" ") + "..."
+									+				"&p[title]="+data[i]['title'].replace(/<[^>]*>/g, '')
+									+				"&p[summary]="+$.trim(data[i]['body'].replace(/<[^>]*>/g, '')).substring(0, 100).split(" ").slice(0, -1).join(" ") + "..."
 									+				"&p[url]="+"http://nicolasbrugneaux.me/posts/?id="+data[i]['id']+"'"
 									//+				"&p[images[0]]="
 									+			" target='_blank'>"
@@ -123,7 +123,7 @@ function blogify () {
 				{
 					hu = window.location.search.substring(1);
 				    gy = hu.split("&");
-				    for (i=0;i<gy.length;i++) {
+				    for (var i=0, len=gy.length; i<len;i++) {
 				        ft = gy[i].split("=");
 				        if (ft[0] == "id") {
 				            $('#modal-'+ft[1]).modal();
@@ -165,7 +165,7 @@ function showNextPosts(from, howMany)
 			if(!$.isEmptyObject(data))
 			{
 				$('#bar').show();
-				for (var i = 0; i < data.length; i++) 
+				for (var i = 0, len = data.length; i < len; i++) 
 				{
 					content += (i%3 == 0) ?"<hr><div class='row'>":"";
 						content +="<div class='span4'>"
@@ -189,8 +189,8 @@ function showNextPosts(from, howMany)
 
 					   				+		"<a class='btn facebook'"
 									+			"href='http://www.facebook.com/sharer.php?s=100"
-									+				"&p[title]="+data[i]['title']
-									+				"&p[summary]="+$.trim(data[i]['body']).substring(0, 100).split(" ").slice(0, -1).join(" ") + "..."
+									+				"&p[title]="+data[i]['title'].replace(/<[^>]*>/g, '')
+									+				"&p[summary]="+$.trim(data[i]['body'].replace(/<[^>]*>/g, '')).substring(0, 100).split(" ").slice(0, -1).join(" ") + "..."
 									+				"&p[url]="+"http://nicolasbrugneaux.me/posts/?id="+data[i]['id']+"'"
 									//+				"&p[images[0]]="
 									+			" target='_blank'>"
@@ -230,7 +230,7 @@ function showNextPosts(from, howMany)
 					{
 						hu = window.location.search.substring(1);
 					    gy = hu.split("&");
-					    for (i=0;i<gy.length;i++) {
+					    for (i=0, len=gy.length; i<len; i++) {
 					        ft = gy[i].split("=");
 					        if (ft[0] == "id") {
 					            $('#modal-'+ft[1]).modal();

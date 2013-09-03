@@ -47,7 +47,7 @@ if(isset($_POST) && $_POST!=null)
 
 <body>
 
-  <?php include_once('./pages/nav.html') ?>
+  <?php include_once('./pages/nav.php') ?>
   <div class="content">
     <div class="container">
       <div class="notifications">
