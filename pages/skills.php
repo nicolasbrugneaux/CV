@@ -13,15 +13,16 @@
         <ul class="unstyled">
           <li><strong>Server</strong></li>
           <li>
-            PHP - <small><i>CodeIgniter, CakePHP</i></small>
+            PHP - <code><small>CodeIgniter, CakePHP</small></code>
             <div class="progress">
               <div class="bar" style="width: 90%"></div>
             </div>
           </li>
           <li>
-            Python - <small><i>Django</i></small>
+            Python - <code><small>Django, Flask, Flask-Restless</small></code>
             <div class="progress">
               <div class="bar" style="width: 60%"></div>
+              <div class="bar bar-success" style="width: 30%"></div>              
             </div>
           </li>
           <hr>
@@ -32,14 +33,15 @@
               <div class="bar" style="width: 90%"></div>
             </div>
           </li>
-          <li>CSS3 - <small><i>{ LESS }</i></small>
+          <li>CSS3 - <code><small>{ LESS }</small></code>
             <div class="progress">
               <div class="bar" style="width: 80%"></div>
             </div>
           </li>
-          <li>JavaScript - <small><i>JQuery</i></small>
+          <li>JavaScript - <code><small>JQuery, AngularJS</small></code>
             <div class="progress">
               <div class="bar" style="width: 70%"></div>
+              <div class="bar bar-success" style="width: 15%"></div> 
             </div>
           </li>
         </ul>
@@ -47,7 +49,7 @@
       <div class="span3">
         <h3>Object Oriented</h3>
         <ul class="unstyled">
-          <li>Java - <small><i>Android</i></small>
+          <li>Java - <code><small>Android</small></code>
             <div class="progress">
               <div class="bar" style="width: 80%"></div>
             </div>
@@ -62,7 +64,7 @@
       <div class="span3">
         <h3>Others</h3>
         <ul class="unstyled">
-          <li>C - <small><i>Micro electronics with AVR ATMega1280&amp;2560</i></small>
+          <li>C - <code><small>Micro electronics with AVR ATMega1280 &amp; 2560</small></code>
             <div class="progress">
               <div class="bar" style="width: 70%"></div>
             </div></li>
@@ -75,11 +77,12 @@
             <div class="progress">
               <div class="bar" style="width: 75%"></div>
             </div></li>
-          <li>SQL - <small><i>MySQL, SQLite, Oracle</i></small>
+          <li>SQL - <code><small>MySQL, DQL, SQLite, Oracle, SQLAlchemy</small></code>
             <div class="progress">
               <div class="bar" style="width: 80%"></div>
+              <div class="bar bar-success" style="width: 15%"></div> 
             </div></li>
-          <li>Versioning - <small><i>Git, Mercurial</i></small>
+          <li>Versioning - <code><small>Git, Mercurial</small></code>
             <div class="progress">
               <div class="bar" style="width: 80%"></div>
             </div></li>
