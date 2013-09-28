@@ -8,19 +8,19 @@
     <title>Error 403</title>
 
     <!-- Le style -->
-    <link href="../css/style.min.css" rel="stylesheet">
+    <link href="../static/css/style.min.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="../js/html5shiv.js"></script>
+      <script src="../static/js/html5shiv.js"></script>
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="../ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="../ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../static/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../static/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../static/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../static/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../static/ico/favicon.png">
 </head>
 
 <body>
@@ -48,10 +48,10 @@
 
   <!-- Le javascript
   ================================================== -->
-  <script src="../js/jquery.1.10.1.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/jquery-ui-1.10.3.min.js"></script>
-  <script src="../js/googleAnalytics.js"></script>
+  <script src="../static/js/jquery.1.10.1.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/jquery-ui-1.10.3.min.js"></script>
+  <script src="../static/js/googleAnalytics.js"></script>
 
 </body>
 </html>

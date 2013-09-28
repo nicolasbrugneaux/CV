@@ -10,51 +10,75 @@
       <h2>Programming languages</h2>
       <div class="span3">
         <h3>Web Development</h3>
+        <hr>
         <ul class="unstyled">
-          <li><strong>Server</strong></li>
-          <li>
-            PHP - <code><small>CodeIgniter, CakePHP</small></code>
+         <li><strong>Server</strong></li>
+         <br>
+          <li><strong>PHP</strong><br>
+            <div class="skill-details">
+              <code><em>CodeIgniter</em></code> <code><em>CakePHP</em></code>
+            </div>
             <div class="progress">
               <div class="bar" style="width: 90%"></div>
             </div>
           </li>
-          <li>
-            Python - <code><small>Django, Flask, Flask-Restless</small></code>
+          <li><strong>Python</strong> <br>
+            <div class="skill-details">
+              <code><em>Django</em></code> <code><em>Flask</em></code> <code><em>Flask-Restless</em></code>
+            </div>
             <div class="progress">
               <div class="bar" style="width: 60%"></div>
               <div class="bar bar-success" style="width: 30%"></div>              
             </div>
           </li>
-          <hr>
+          <li><strong>JavaScript</strong><br>
+            <div class="skill-details">
+              <code><em>Node.js</em></code> <code><em>Express.js</em></code>
+            </div>
+            <div class="progress">
+              <div class="bar bar-success" style="width: 50%"></div> 
+            </div>
+          </li>
+          <br>
           <li><strong>Client</strong></li>
-          <li>
-            HTML5
+          <br>
+          <li><strong>HTML5</strong><br>
             <div class="progress">
               <div class="bar" style="width: 90%"></div>
             </div>
           </li>
-          <li>CSS3 - <code><small>{ LESS }</small></code>
+          <li><strong>CSS3</strong><br>
+            <div class="skill-details">
+              <code><em>{ LESS }</em></code>
+            </div>
             <div class="progress">
               <div class="bar" style="width: 80%"></div>
             </div>
           </li>
-          <li>JavaScript - <code><small>JQuery, AngularJS</small></code>
+          <li><strong>JavaScript</strong><br>
+            <div class="skill-details">
+              <code><em>Angular.js</em></code> <code><em>JQuery</em></code> <code><em>CofeeScript</em></code>
+            </div>
             <div class="progress">
               <div class="bar" style="width: 70%"></div>
-              <div class="bar bar-success" style="width: 15%"></div> 
+              <div class="bar bar-success" style="width: 25%"></div> 
             </div>
           </li>
         </ul>
       </div>
       <div class="span3">
         <h3>Object Oriented</h3>
+        <hr>
         <ul class="unstyled">
-          <li>Java - <code><small>Android</small></code>
+          <li><strong>Java</strong><br>
+            <div class="skill-details">
+              <code><em>Android</em></code>
+            </div>
             <div class="progress">
               <div class="bar" style="width: 80%"></div>
             </div>
           </li>
-          <li>C#
+          <li><strong>C</strong>#<br>
             <div class="progress">
               <div class="bar" style="width: 50%"></div>
             </div>
@@ -63,26 +87,36 @@
       </div>
       <div class="span3">
         <h3>Others</h3>
+        <hr>
         <ul class="unstyled">
-          <li>C - <code><small>Micro electronics with AVR ATMega1280 &amp; 2560</small></code>
+          <li><strong>C</strong><br>
+            <div class="skill-details">
+              <code><em>AVR ATMega1280 &amp; 2560</em></code>
+            </div>
             <div class="progress">
               <div class="bar" style="width: 70%"></div>
             </div></li>
-          <li>Assembly
+          <li><strong>Assembly</strong><br>
             <div class="progress">
               <div class="bar" style="width: 40%"></div>
             </div>
           </li>
-          <li>Bash
+          <li><strong>Bash</strong><br>
             <div class="progress">
               <div class="bar" style="width: 75%"></div>
             </div></li>
-          <li>SQL - <code><small>MySQL, DQL, SQLite, Oracle, SQLAlchemy</small></code>
+          <li><strong>SQL</strong><br>
+            <div class="skill-details">
+              <code><em>MySQL</em></code> <code><em>DQL</em></code> <code><em>SQLite</em></code> <code><em>Oracle</em></code> <code><em>SQLAlchemy</em></code>
+            </div>
             <div class="progress">
               <div class="bar" style="width: 80%"></div>
               <div class="bar bar-success" style="width: 15%"></div> 
             </div></li>
-          <li>Versioning - <code><small>Git, Mercurial</small></code>
+          <li><strong>Versioning</strong><br>
+            <div class="skill-details">
+              <code><em>Git</em></code> <code><em>Mercurial</em></code>
+            </div>
             <div class="progress">
               <div class="bar" style="width: 80%"></div>
             </div></li>
@@ -96,8 +130,8 @@
     <div class="span4">
       <h2>Languages</h2>
       <ul class="unstyled">
-        <li>French - Mothertongue</li>
-        <li>English - Spoken and written fluently</li>
+        <li>French Mothertongue</li>
+        <li>English Spoken and written fluently</li>
       </ul>
     </div>
     <div class="span4">

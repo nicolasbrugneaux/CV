@@ -1528,6 +1528,7 @@ a.thumbnail:hover{background-color:#bbb;border-color:transparent}
 .navbar .brand{font-family:'Gloria Hallelujah',cursive}.navbar .brand:hover{color:#fff}
 @media (min-width:980px){.navbar .brand{border-right:1px solid rgba(0,0,0,0.2)} .content{min-height:600px}}.navbar .nav li.dropdown>a:hover .caret,.navbar .nav li.dropdown>a:focus .caret{border-top-color:#fff;border-bottom-color:#fff}
 .navbar .nav>li>a:focus,.navbar .nav>li>a:hover{color:#fff}
+.skill-details{margin-bottom:3px}
 .notifications{margin-top:55px}.notifications .alert a{color:#fff;text-decoration:underline;font-weight:bold}.notifications .alert a:hover,.notifications .alert a:focus{background-color:inherit}
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);-webkit-border-radius:10px;border-radius:10px}
