@@ -1,7 +1,7 @@
 ###
     @inspired: by hakim.se
  ###
-supports3DTransforms =  document.body.style['webkitPerspective'] is not undefined or document.body.style['MozPerspective'] is not undefined
+supports3DTransforms =  document.body.style['webkitPerspective'] != undefined or document.body.style['MozPerspective'] != undefined
 
 linkify = ( selector ) ->
     if supports3DTransforms
@@ -9,6 +9,6 @@ linkify = ( selector ) ->
         nodes = document.querySelectorAll( selector );
 
         for node in nodes
-            if not node.className or not node.className.match( /roll/g )
+            if !node.className or !node.className.match( /roll/g )
                 node.className += ' roll'
-                node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>'
+                node.innerHTML = "<span data-title=\"#{node.text} \">#{node.innerHTML}</span>"

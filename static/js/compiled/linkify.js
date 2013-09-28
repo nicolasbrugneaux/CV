@@ -7,7 +7,7 @@
 (function() {
   var linkify, supports3DTransforms;
 
-  supports3DTransforms = document.body.style['webkitPerspective'] === !void 0 || document.body.style['MozPerspective'] === !void 0;
+  supports3DTransforms = document.body.style['webkitPerspective'] !== void 0 || document.body.style['MozPerspective'] !== void 0;
 
   linkify = function(selector) {
     var node, nodes, _i, _len, _results;
@@ -18,7 +18,7 @@
         node = nodes[_i];
         if (!node.className || !node.className.match(/roll/g)) {
           node.className += ' roll';
-          _results.push(node.innerHTML = '<span data-title="' + node.text(+'">' + node.innerHTML + '</span>'));
+          _results.push(node.innerHTML = "<span data-title=\"" + node.text + " \">" + node.innerHTML + "</span>");
         } else {
           _results.push(void 0);
         }
